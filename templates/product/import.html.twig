@@ -1,0 +1,27 @@
+{# templates/csv/upload.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <main>
+        <div class="top">
+            <div class="link">
+                <a href="{{path('app_product_index')}}">Go Back</a>
+            </div>
+            <h1>Import Product</h1>
+        </div>
+
+        {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button type="submit" class="btn btn-primary">Upload</button>
+        {{ form_end(form) }}
+
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </main>
+{% endblock %}

@@ -1,0 +1,220 @@
+*{
+    padding:0;
+    margin: 0;
+}
+body {
+    background-color: lightgray;
+}
+
+main{
+    max-width: 1080px;
+    margin:20px auto;
+    background-color: white;
+    padding: 20px;
+    box-sizing: 1px 1px 3px #ccc;
+    border-radius: 6px;
+
+
+    h1{
+        font-size: 22px;
+    }
+
+    .table{
+        overflow: auto;
+        position: relative
+    }
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+
+        tr>th, tr> td{
+            border: 1px solid #ccc;
+            padding: 8px 14px;
+            text-align: left;
+            font-size:14.50px;
+        }
+
+        tr > td > .action{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            gap:10px;
+            justify-content: start;
+
+            a{
+                border:none; 
+                background-color:lightgreen; 
+                color:#333;
+                font-size:13px; 
+                padding:3px 14px;
+                border-radius:5px;
+                cursor:pointer;
+                text-decoration: none;
+            }
+        }
+
+        .no-data{
+            text-align: center;
+            padding:10px;
+        }
+
+        .detail{
+            text-decoration: none;
+            background-color: aquamarine;
+            font-size: 13px;
+            padding:3px 8px;
+            color:#333;
+            border-radius: 4px;
+            border:1px solid #ccc;
+        }
+
+        
+    }
+
+    .top{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .home{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap:10px;
+
+            .export, .import, .addnew{
+                border:none;
+                padding:8px 14px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size:14px;
+            }
+
+            .export{
+                background-color:rgb(224, 169, 15);
+                color:#444;
+            }
+
+            .import{
+                background-color:rgb(14, 116, 150);
+                color:#fff;
+            }
+
+            .addnew{
+                background-color:#242ef0;
+                color:#f9f9f9;
+            }
+        }
+
+        .link{
+            a{
+                border:none;
+                background-color:#242ef0;
+                color:#f9f9f9;
+                padding:8px 14px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size:14px;
+            }
+        }
+
+        .searchForm > form > #product_search > div > input{
+            padding: 8px 6px;
+            width:100%;
+            border-radius: 6px;
+            border:1px solid #ccc;
+            outline:none;
+        }
+    }
+   
+
+    /* form */
+    form{
+        margin:10px auto;
+        max-width: 400px;
+
+        #product{
+            display:flex;
+            flex-direction: column;
+            gap:10px;
+
+            div{
+                display: flex;
+                flex-direction: column;
+
+                label{
+                    font-weight: bold;
+                    color:#5b5a5a;
+                    font-size:15px;
+                    margin-bottom: 2px;
+                }
+
+                input, textarea{
+                    box-sizing: border-box;
+                    padding:10px 6px;
+                    outline: none;
+                    border-radius: 5px;
+                    border:1px solid #ccc;
+                }
+
+                ul, li{
+                    list-style-type:none;
+                    color:#ef2d2d;
+                    font-size:14px;
+                    margin-bottom: 2px;
+                }
+            }
+            
+        }
+    }
+
+    .btn{
+        margin-top: 15px;
+        border:none;
+        background-color:#e5b012;
+        color:#333;
+        padding:8px 14px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size:14px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+
+
+.pagination {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+    .current{
+        background-color:#007bff;
+    }
+
+    span {
+        margin:0px 2px;
+        background-color: #ccc;
+        padding:5px 12px;
+        border-radius: 3px;
+    }
+
+    span > a{
+        text-decoration: none;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    main > .top  {
+        flex-direction: column;
+        gap:10px;
+        margin-bottom: 10px;
+    }
+
+    main > .table {
+        margin-top: 30px;
+    }
+}
