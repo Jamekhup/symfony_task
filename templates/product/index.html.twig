@@ -29,10 +29,10 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Stock</th>
+                        <th>{{ knp_pagination_sortable(pagination, 'ID', 'p.id') }}</th>
+                        <th>{{ knp_pagination_sortable(pagination, 'Name', 'p.name') }}</th>
+                        <th>{{ knp_pagination_sortable(pagination, 'Price', 'p.price') }}</th>
+                        <th>{{ knp_pagination_sortable(pagination, 'Stock', 'p.stock') }}</th>
                         <th>Created At</th>
                         <th>Detail</th>
                         <th>actions</th>
